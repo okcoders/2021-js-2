@@ -1,0 +1,14 @@
+{
+  "name": "in-class",
+  "version": "1.0.0",
+  "description": "in class example of scraping wiki",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zach",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
