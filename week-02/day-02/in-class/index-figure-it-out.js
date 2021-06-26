@@ -11,24 +11,24 @@ axios.get(url)
 			if (i === 1) {
 				var cells = e.children
 				cells.forEach((element, i) => {
-					// console.log("=============================")
-					// console.log(element.type)
-					// console.log(element.name)
+					console.log("=============================")
+					console.log(element.type)
+					console.log(element.name)
 					if (element.children) {
 
 						// console.log(element.children.length)
 					}
 					if (i === 7) {
 						element.children.forEach((element, i) => {
-							// console.log(element.type)
-							// console.log(element.name)
+							console.log(element.type)
+							console.log(element.name)
 							if (element.children) {
 								console.log(element.children[0].children[0].data)
 							}
 
 						})
 					}
-					// console.log("=============================")
+					console.log("=============================")
 				});
 			}
 		})

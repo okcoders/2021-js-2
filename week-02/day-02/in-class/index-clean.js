@@ -32,11 +32,11 @@ function isRowWithPresidentData(row) {
 }
 
 function processPresidentDataRow(rowCells) {
-	var name = getPresidentNameFromRow(rowCells)
+	var nameData = getPresidentNameFromRow(rowCells)
 	// add an additional piece of row data here
 	// example
 	// var firstTermParty = getPartyFromRow(rowCells)
-	presidents.push({ name })
+	presidents.push({ name: nameData })
 }
 
 function getPresidentNameFromRow(rowCells) {

@@ -10,7 +10,6 @@ axios.get(url)
 
 			if (i === 0) {
 				const children = e.children
-				// console.log(children)
 				children.forEach((e) => console.log(e))
 
 			}
