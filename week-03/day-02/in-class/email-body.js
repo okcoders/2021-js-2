@@ -15,18 +15,21 @@ const standupData = [
 	},
 ]
 
-const firstDeveloper = standupData[0]
+function makeEmailTextForAllDevelopers(developerData) {
+	const developerTexts = developerData.map(makeEmailTextFromDeveloper)
+	return developerTexts.join('\n ===============================')
+}
 
 function makeEmailTextFromDeveloper(developerData) {
 	const name = developerData.developer
 	const activeTasksText = makeBulletedListOfTasksWithStatus(developerData.tasks, "active")
 	const completedTasksText = makeBulletedListOfTasksWithStatus(developerData.tasks, "completed")
 	return `
-		Dev Name: ${name}
-		Active Tasks:
-		 ${activeTasksText} 
-		Completed Tasks:
-		 ${completedTasksText} 
+	Dev Name: ${name}
+	Active Tasks:
+	 ${activeTasksText} 
+	Completed Tasks:
+	 ${completedTasksText} 
 	`
 }
 
@@ -38,5 +41,5 @@ function makeBulletedListOfTasksWithStatus(taskList, status) {
 	return tasksText
 }
 
-const temp = makeEmailTextFromDeveloper(firstDeveloper)
-console.log(temp)
+const emailBodyText = makeEmailTextForAllDevelopers(standupData)
+console.log(emailBodyText)
